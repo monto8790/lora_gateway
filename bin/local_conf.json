@@ -1,0 +1,18 @@
+{
+    "gateway_conf": {
+        "gateway_ID": "b827ebfffef714bf",
+        "contact_email" : "",
+        "description": "keti",
+        "servers": [
+            {
+                "server_address": "router.as1.thethings.network",
+                "serv_gw_id": "b827ebfffef714bf",
+                "serv_gw_key": "ttn-account-v2.OEsn9VQLefFccIBj4UJVSIA83JuXDmKbmb3nWfYfujrFodoGeGH6n9Z5i5eRuQM99ggV2wc3FHNx7iepabJ7kA",
+                "serv_enabled": true
+            }
+        ],
+        "gps": true,
+        "fake_gps": true,
+        "gps_tty_path":"/dev/trtyACM0"
+    }
+}
