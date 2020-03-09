@@ -48,26 +48,6 @@ Add the line `ttn ALL=(ALL) NOPASSWD: ALL`
 
         $ sudo userdel -rf pi
 
-- Configure the wifi credentials (check [here for additional details](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md))
-
-        $ sudo nano /etc/wpa_supplicant/wpa_supplicant.conf 
-
-And add the following block at the end of the file, replacing SSID and password to match your network:
-
-                network={
-                    ssid="The_SSID_of_your_wifi"
-                    psk="Your_wifi_password"
-                }
- 
-- Clone [the installer](https://github.com/ttn-zh/ic880a-gateway/) and start the installation
-
-        $ git clone https://github.com/ttn-zh/ic880a-gateway.git ~/ic880a-gateway
-        $ cd ~/ic880a-gateway
-        $ sudo ./install.sh spi
-
-- If you want to use the remote configuration option, please make sure you have created a JSON file named as your gateway EUI (e.g. `B827EBFFFE7B80CD.json`) in the [Gateway Remote Config repository](https://github.com/ttn-zh/gateway-remote-config). 
-- **Big Success!** You should now have a running gateway in front of you!
-
 # Credits
 
 These scripts are largely based on the awesome work by [Ruud Vlaming](https://github.com/devlaam) on the [Lorank8 installer](https://github.com/Ideetron/Lorank).
