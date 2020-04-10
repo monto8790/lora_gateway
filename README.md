@@ -11,7 +11,7 @@ Check [a step-by-step HOWTO in our wiki](https://github.com/ttn-zh/ic880a-gatewa
 ## Update
 
 If you have a running gateway and want to update, simply run the installer again:
-
+        $ git clone https://github.com/monto8790/lora_gateway  
         $ cd ~/ic880a-gateway
         $ sudo ./install.sh spi
 - Default password of a plain-vanilla RASPBIAN install for user `pi` is `raspberry`
@@ -33,20 +33,16 @@ If you have a running gateway and want to update, simply run the installer again
 
 - Create new user for TTN and add it to sudoers
 
-        $ sudo adduser ttn 
-        $ sudo adduser ttn sudo
+        $ sudo adduser keti
+        $ sudo adduser keti sudo
 
 - To prevent the system asking root password regularly, add TTN user in sudoers file
 
         $ sudo visudo
 
-Add the line `ttn ALL=(ALL) NOPASSWD: ALL`
+Add the line `keti ALL=(ALL:ALL) NOPASSWD: ALL`
 
 :warning: Beware this allows a connected console with the ttn user to issue any commands on your system, without any password control. This step is completely optional and remains your decision.
-
-- Logout and login as `ttn` and remove the default `pi` user
-
-        $ sudo userdel -rf pi
 
 # Credits
 
